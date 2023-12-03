@@ -1,0 +1,39 @@
+#include <iostream>
+
+double calculateAverage(int arr[], int size) {
+    double sum = 0.0;
+
+    
+    for (int i = 0; i < size; ++i) {
+        sum += arr[i];
+    }
+
+    
+    double average = sum / size;
+    return average;
+}
+
+int main() {
+    int size;
+
+    
+    std::cout << "Enter the size of the array: ";
+    std::cin >> size;
+
+    int arr[size];
+
+    
+    std::cout << "Enter elements of the array:" << std::endl;
+    for (int i = 0; i < size; ++i) {
+        std::cout << "Enter element " << i << ": ";
+        std::cin >> arr[i];
+    }
+
+    
+    double average = calculateAverage(arr, size);
+
+    
+    std::cout << "The average of elements in the array is: " << average << std::endl;
+
+    return 0;
+}
