@@ -1,0 +1,54 @@
+#include <iostream>
+
+void insertElement(int arr[], int &size, int position, int element) {
+    if (position < 0 || position > size) {
+        std::cout << "Invalid position!" << std::endl;
+        return;
+    }
+
+    
+    size++;
+
+    
+    for (int i = size - 1; i > position; --i) {
+        arr[i] = arr[i - 1];
+    }
+
+    // Insert the element at the specified position
+    arr[position] = element;
+}
+
+int main() {
+    int size, position, element;
+
+    // Input size of the array
+    std::cout << "Enter the size of the array: ";
+    std::cin >> size;
+
+    int arr[100]; // Assuming a maximum array size of 100
+
+    
+    std::cout << "Enter elements of the array:" << std::endl;
+    for (int i = 0; i < size; ++i) {
+        std::cout << "Enter element " << i << ": ";
+        std::cin >> arr[i];
+    }
+
+    
+    std::cout << "Enter the position to insert the element: ";
+    std::cin >> position;
+    std::cout << "Enter the element to insert: ";
+    std::cin >> element;
+
+    // Insert the element at the specified position
+    insertElement(arr, size, position, element);
+
+    
+    std::cout << "Array after insertion:" << std::endl;
+    for (int i = 0; i < size; ++i) {
+        std::cout << arr[i] << " ";
+    }
+    std::cout << std::endl;
+
+    return 0;
+}
