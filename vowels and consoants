@@ -1,0 +1,33 @@
+#include <iostream>
+#include <cctype>
+
+bool isVowel(char ch) {
+    
+    ch = std::tolower(ch);
+
+  
+    if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+        return true;
+    }
+
+    return false;
+}
+
+int main() {
+    char character;
+
+    std::cout << "Enter a character: ";
+    std::cin >> character;
+
+    if (std::isalpha(character)) {
+        if (isVowel(character)) {
+            std::cout << character << " is a vowel." << std::endl;
+        } else {
+            std::cout << character << " is a consonant." << std::endl;
+        }
+    } else {
+        std::cout << "Invalid input. Please enter an alphabetic character." << std::endl;
+    }
+
+    return 0;
+}
