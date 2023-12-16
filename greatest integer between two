@@ -1,0 +1,14 @@
+#include <iostream>
+
+int main() {
+    int num1, num2;
+
+    std::cout << "Enter two integers separated by space: ";
+    std::cin >> num1 >> num2;
+
+    int maxNum = (num1 > num2) ? num1 : num2;
+
+    std::cout << "The greatest integer between " << num1 << " and " << num2 << " is: " << maxNum << std::endl;
+
+    return 0;
+}
