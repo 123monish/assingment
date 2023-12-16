@@ -1,0 +1,36 @@
+#include <iostream>
+
+int main() {
+    int num1, num2;
+
+    std::cout << "Enter two integers separated by space: ";
+    std::cin >> num1 >> num2;
+
+    
+    int sum = num1 + num2;
+    std::cout << "Sum: " << num1 << " + " << num2 << " = " << sum << std::endl;
+
+    
+    int difference = num1 - num2;
+    std::cout << "Difference: " << num1 << " - " << num2 << " = " << difference << std::endl;
+
+    
+    int product = num1 * num2;
+    std::cout << "Product: " << num1 << " * " << num2 << " = " << product << std::endl
+    if (num2 != 0) {
+        float quotient = static_cast<float>(num1) / num2;
+        std::cout << "Division: " << num1 << " / " << num2 << " = " << quotient << std::endl;
+    } else {
+        std::cout << "Division by zero is undefined." << std::endl;
+    }
+
+
+    if (num2 != 0) {
+        int remainder = num1 % num2;
+        std::cout << "Modulo (Remainder): " << num1 << " % " << num2 << " = " << remainder << std::endl;
+    } else {
+        std::cout << "Modulo (Remainder) by zero is undefined." << std::endl;
+    }
+
+    return 0;
+}
