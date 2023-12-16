@@ -1,0 +1,30 @@
+#include <iostream>
+
+bool isHarshadNumber(int number) {
+    int originalNumber = number;
+    int sumOfDigits = 0;
+
+  
+    while (number > 0) {
+        int digit = number % 10;
+        sumOfDigits += digit;
+        number /= 10;
+    }
+
+    return (originalNumber % sumOfDigits == 0);
+}
+
+int main() {
+    int num;
+
+    std::cout << "Enter a number to check if it's a Harshad number: ";
+    std::cin >> num;
+
+    if (isHarshadNumber(num)) {
+        std::cout << num << " is a Harshad number." << std::endl;
+    } else {
+        std::cout << num << " is not a Harshad number." << std::endl;
+    }
+
+    return 0;
+}
