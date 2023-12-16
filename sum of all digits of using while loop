@@ -1,0 +1,25 @@
+#include <iostream>
+
+int sumOfDigits(int number) {
+    int sum = 0;
+
+    while (number != 0) {
+        int digit = number % 10; 
+        sum += digit; 
+        number /= 10; 
+    }
+
+    return sum;
+}
+
+int main() {
+    int num;
+    std::cout << "Enter a number to find the sum of its digits: ";
+    std::cin >> num;
+
+    int result = sumOfDigits(num);
+
+    std::cout << "Sum of digits of " << num << " is: " << result << std::endl;
+
+    return 0;
+}
